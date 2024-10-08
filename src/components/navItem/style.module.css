@@ -1,0 +1,10 @@
+.navItem {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: inherit;
+  text-decoration: none;
+}
+.navItem span {
+  display: flex;
+}
