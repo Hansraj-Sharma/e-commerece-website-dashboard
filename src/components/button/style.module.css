@@ -3,19 +3,26 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  border: none;
+  cursor: pointer;
 }
 .small {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 20px;
   padding: 8px 16px;
   border-radius: 4px;
 }
-.fill {
+.text {
 }
-.outline {
+.blue {
+  color: #ffffff;
+  background-color: #1e5eff;
+}
+.white {
   color: #1e5eff;
-  background-color: #d9e4ff;
+  background-color: #ffffff;
+  border: 1px solid #d7dbec;
 }
 .link_button {
   text-decoration: none;

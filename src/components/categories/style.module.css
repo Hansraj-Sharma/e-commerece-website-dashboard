@@ -1,0 +1,11 @@
+.Categories_main {
+  padding: 30px 40px 40px 40px;
+}
+.Categories_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.product_box {
+  width: calc(33.33% - 20px);
+}

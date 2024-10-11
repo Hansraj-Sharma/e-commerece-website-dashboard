@@ -1,0 +1,76 @@
+.order_main {
+  padding: 30px 40px 40px 40px;
+}
+.order_footer {
+  padding: 32px 28px 40px 28px;
+  border: 1px solid #e6e9f4;
+}
+.order_table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.order_data_wrapper {
+  border-bottom: 2px solid #e6e9f4;
+}
+.order_data_wrapper th:first-child,
+.order_data_wrapper td:first-child {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #131523;
+}
+.order_data_wrapper th,
+.order_data_wrapper td {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: left;
+  color: #131523;
+  padding: 12px 8px;
+}
+.product_info {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.product_img {
+  width: 48px;
+  height: 48px;
+  border-radius: 6px;
+}
+.product_name .product_category {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #131523;
+}
+.product_name span {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #5a607f;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination button {
+  margin: 0 5px;
+  width: 36px;
+  height: 36px;
+  border-radius: 4px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.pagination button.active {
+  background-color: #ecf2ff;
+  color: #1e5eff;
+}

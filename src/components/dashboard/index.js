@@ -128,7 +128,7 @@ const Dashboard = () => {
             </div>
           </div>
 
-          {/* <div className={styles.d_tabel}>
+          <div className={styles.d_tabel}>
             <div className={styles.d_tabel_box}>
               <div className={styles.d_tabel_title}>
                 Top Products by Units Sold
@@ -224,7 +224,7 @@ const Dashboard = () => {
                 </tr>
               </table>
             </div>
-          </div> */}
+          </div>
         </div>
       </div>
     </>

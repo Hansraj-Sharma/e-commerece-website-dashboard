@@ -1,0 +1,125 @@
+.back_btn {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #5a607f;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.back_btn span {
+  font-size: 18px;
+}
+.product_main {
+  display: flex;
+  gap: 30px;
+}
+.product_wrapper {
+  display: flex;
+  gap: 30px;
+  padding: 28px 28px 40px 28px;
+  box-shadow: 0 1px 4px #15223214;
+}
+.product_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  margin-bottom: 12px;
+  border-radius: 4px;
+  border: 1px solid #e6e9f4;
+}
+.product_box {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.product_title {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #131523;
+  padding-bottom: 24px;
+}
+.product_title span {
+  font-weight: 400;
+  color: #5a607f;
+}
+.product_img img {
+  width: 48px;
+  height: 48px;
+  border-radius: 4px;
+  object-fit: cover;
+}
+.product_name {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #131523;
+  padding-left: 2px;
+}
+.product_icons {
+  color: #7e84a3;
+  cursor: pointer;
+  z-index: 3;
+}
+.product_icons span {
+  margin-right: 20px;
+}
+.product_main_right {
+  width: 350px;
+}
+.category_visibility {
+  padding: 28px;
+  margin-bottom: 30px;
+  box-shadow: 0 1px 4px #15223214;
+}
+.category_title {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #131523;
+  margin-bottom: 24px;
+}
+.category_checkbox {
+  position: relative;
+  display: inline-block;
+  width: 65px;
+  height: 35px;
+}
+.category_checkbox input {
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #fff;
+  border-radius: 30px;
+  transition: ease-in-out 0.4s;
+  cursor: pointer;
+  border: 1px solid #ccc;
+}
+.slider::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 30px;
+  height: 30px;
+  border: 1px solid red;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px #999999;
+  transition: ease-in-out 0.4s;
+}
+.category_checkbox input:checked + .slider {
+  background-color: blue;
+}
+.category_checkbox input:checked + .slider::before {
+  transform: translateX(30px);
+}

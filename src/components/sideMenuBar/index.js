@@ -16,10 +16,10 @@ import SettingIcon from "../../icons/settingIcon";
 import ListIcon from "../../icons/listIcon";
 
 const NavigationData1 = [
-  { icon: <HomeIcon />, title: "Dashboard" },
-  { icon: <ListIcon />, title: "Orders" },
-  { icon: <FinanceIcon />, title: "Products" },
-  { icon: <FolderIcon />, title: "Categories" },
+  { icon: <HomeIcon />, title: "Dashboard", path: "/dashboard" },
+  { icon: <ListIcon />, title: "Orders", path: "/orders" },
+  { icon: <FinanceIcon />, title: "Products", path: "/products" },
+  { icon: <FolderIcon />, title: "Categories", path: "/categories" },
   { icon: <UserIcon />, title: "Customers" },
   { icon: <StatisticsIcon />, title: "Reports" },
   { icon: <StarIcon />, title: "Coupons" },
@@ -37,30 +37,33 @@ const NavigationData3 = [
 const SideMenuBar = () => {
   return (
     <div className={styles.sidebar}>
-      <div className={styles.navigation_top}>
-        {NavigationData1.map((value, index) => (
-          <div className={styles.navigation} key={index}>
-            <NavItem title={value.title} icon={value.icon} />
-          </div>
-        ))}
-      </div>
-      <div className={styles.navigation_miduem}>
-        <div className={styles.navigation_title}>Other Information</div>
-        {NavigationData2.map((value, index) => (
-          <div className={styles.navigation} key={index}>
-            <NavItem title={value.title} icon={value.icon} />
-          </div>
-        ))}
+      <div className={styles.sidebar_top}>
+        <div className={styles.navigation_top}>
+          {NavigationData1.map((value, index) => (
+            <div className={styles.navigation} key={index}>
+              <NavItem title={value.title} icon={value.icon} to={value.path} />
+            </div>
+          ))}
+        </div>
+        <div className={styles.navigation_miduem}>
+          <div className={styles.navigation_title}>Other Information</div>
+          {NavigationData2.map((value, index) => (
+            <div className={styles.navigation} key={index}>
+              <NavItem title={value.title} icon={value.icon} />
+            </div>
+          ))}
+        </div>
+
+        <div className={styles.navigation_miduem}>
+          <div className={styles.navigation_title}>Settings</div>
+          {NavigationData3.map((value, index) => (
+            <div className={styles.navigation} key={index}>
+              <NavItem title={value.title} icon={value.icon} />
+            </div>
+          ))}
+        </div>
       </div>
 
-      <div className={styles.navigation_miduem}>
-        <div className={styles.navigation_title}>Settings</div>
-        {NavigationData3.map((value, index) => (
-          <div className={styles.navigation} key={index}>
-            <NavItem title={value.title} icon={value.icon} />
-          </div>
-        ))}
-      </div>
       <div className={styles.sidebar_bottom}>
         <div className={styles.sb_box}>
           <div className={styles.sb_title}>Grow Business</div>

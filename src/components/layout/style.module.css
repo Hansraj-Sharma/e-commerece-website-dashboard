@@ -1,0 +1,6 @@
+.outLet_wrapper {
+  display: flex;
+}
+.outLet {
+  flex: 1;
+}

@@ -9,9 +9,10 @@ const Button = ({
   size,
   type,
   customClass,
+  bg,
   isButton = false,
 }) => {
-  const commonClass = `${styles.button} ${styles[size]} ${styles[type]}   ${styles[customClass]} `;
+  const commonClass = `${styles.button} ${styles[size]} ${styles[type]} ${styles[bg]}   ${styles[customClass]} `;
   return (
     <>
       {isButton ? (
