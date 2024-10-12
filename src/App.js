@@ -12,6 +12,7 @@ import Orders from "./components/orders";
 import Products from "./components/products";
 import Categories from "./components/categories";
 import CreateCategory from "./components/createCategory";
+import Customers from "./components/customers";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path='/products' element={<Products />}></Route>
           <Route path='/categories' element={<Categories />}></Route>
           <Route path='/createCategory' element={<CreateCategory />}></Route>
+          <Route path='/customers' element={<Customers />}></Route>
           <Route path='*' element={<Dashboard />}></Route>
         </Route>
       </Routes>

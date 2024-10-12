@@ -20,7 +20,7 @@ const NavigationData1 = [
   { icon: <ListIcon />, title: "Orders", path: "/orders" },
   { icon: <FinanceIcon />, title: "Products", path: "/products" },
   { icon: <FolderIcon />, title: "Categories", path: "/categories" },
-  { icon: <UserIcon />, title: "Customers" },
+  { icon: <UserIcon />, title: "Customers", path: "/customers" },
   { icon: <StatisticsIcon />, title: "Reports" },
   { icon: <StarIcon />, title: "Coupons" },
   { icon: <ChatIcon />, title: "Inbox" },
