@@ -148,6 +148,7 @@
 .doc_left {
   padding: 28px 28px 20px 28px;
   border-radius: 6px;
+  flex: 1;
   background-color: #ffffff;
 }
 .doc_left_head {

@@ -1,0 +1,219 @@
+.customersInfo {
+  padding: 30px 40px 40px 40px;
+}
+.back_btn {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #5a607f;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.back_btn span {
+  font-size: 18px;
+}
+.customersInfo_wrapper {
+  display: flex;
+  gap: 30px;
+}
+.customersInfo_left {
+  flex: 1;
+}
+.customersInfo_left_top {
+  padding: 28px;
+  box-shadow: 0 1px 4px 0 #15223214;
+  border-radius: 6px;
+  margin-bottom: 30px;
+}
+.customer_name_wrapper {
+  display: flex;
+  gap: 18px;
+}
+.customer_title {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #e6e9f4;
+}
+.customer_logo {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 44px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background-color: #a1a7c4;
+}
+.customer_name {
+  display: flex;
+  gap: 18px;
+  justify-content: space-between;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #131523;
+  padding-bottom: 8px;
+}
+.customer_other_info {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #5a607f;
+}
+.customer_star {
+  display: flex;
+  gap: 4px;
+  color: #ffc700;
+}
+.customer_notes {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #131523;
+  padding-top: 28px;
+  padding-bottom: 24px;
+}
+.customer_notes_input span {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #5a607f;
+  padding-bottom: 4px;
+}
+.customer_notes_input input {
+  padding: 12px 16px 36px 16px;
+  border: 1px solid #d9e1ec;
+  border-radius: 4px;
+  width: 100%;
+}
+.order_table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.order_data_wrapper {
+  border-bottom: 2px solid #e6e9f4;
+}
+.order_data_wrapper th:first-child,
+.order_data_wrapper td:first-child {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #131523;
+}
+.order_data_wrapper th,
+.order_data_wrapper td {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: left;
+  color: #131523;
+  padding: 16px 8px;
+}
+.order_data_wrapper td:nth-child(4) span {
+  padding: 2px 8px;
+  border-radius: 4px;
+  color: #06a561;
+  background-color: #c4f8e2;
+}
+.order_data_wrapper td:nth-child(5) span {
+  padding: 2px 8px;
+  border-radius: 4px;
+  color: #ffffff;
+  background-color: #f99600;
+}
+.customersInfo_right_top,
+.customersInfo_right_bottom {
+  padding: 28px 28px 20px 28px;
+  box-shadow: 0 1px 4px #15223214;
+  border-radius: 6px;
+  margin-bottom: 30px;
+}
+.customersInfo_right_top_title_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 24px;
+}
+.customersInfo_right_top_title {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #131523;
+}
+.customersInfo_right_top_title_wrapper a {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: right;
+  color: #1e5eff;
+}
+.customersInfo_right_top_address {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #5a607f;
+  padding-bottom: 24px;
+}
+.customersInfo_right_title {
+  padding-bottom: 7px;
+  color: #a1a7c4;
+}
+.rectangle {
+  border: 1px solid #e6e9f4;
+  margin-bottom: 24px;
+}
+.delete_customer {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #f0142f;
+}
+.form_tags label {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #5a607f;
+  padding-bottom: 4px;
+}
+.form_tags .tag_input {
+  padding: 8px 16px;
+  border: 1px solid #d9e1ec;
+  border-radius: 4px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.form_tags input:focus {
+  outline: none;
+}
+.btn_wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #5a607f;
+}
+.form_btn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background-color: #e6e9f4;
+  border-radius: 4px;
+  padding: 4px 6px 4px 12px;
+}
+.form_btn .btn_input {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #5a607f;
+  border: none;
+}
+.form_btn .btn_input:focus {
+  outline: none;
+}

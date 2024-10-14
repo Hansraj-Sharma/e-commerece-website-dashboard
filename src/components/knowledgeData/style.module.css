@@ -1,0 +1,19 @@
+.article_left_data {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  color: #151b26;
+  padding: 12px 20px;
+  border-radius: 5px;
+  margin-bottom: 8px;
+  display: block;
+  width: 255px;
+}
+.article_left_data:hover {
+  color: #ffffff;
+  background-color: #1e2753;
+}
+.article_left_data.active {
+  color: #ffffff;
+  background-color: #1e2753;
+}

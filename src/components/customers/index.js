@@ -3,6 +3,7 @@ import CustomersData from "../../jsonData/customersData.json";
 import Heading from "../heading";
 import Filter from "../filter";
 import styles from "./style.module.css";
+import { Link } from "react-router-dom";
 
 const Customers = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -63,9 +64,9 @@ const Customers = () => {
               <td>
                 <input type='checkbox' />
                 <div className={styles.product_info}>
-                  <div className={styles.customer_name}>
+                  <Link to={"/customersInfo"} className={styles.customer_name}>
                     {value.name.charAt(0)}
-                  </div>
+                  </Link>
                   <div className={styles.product_name}>
                     <div className={styles.product_category}>{value.name} </div>
                   </div>

@@ -1,18 +1,19 @@
 import { Route, Routes } from "react-router-dom";
-import ComfirmaEmail from "./components/confirmaEmail";
-import CreateAccount from "./components/creactAccount";
 import Dashboard from "./components/dashboard";
-import Header from "./components/header";
-import Login from "./components/login";
-import PasswordReset from "./components/passwordReset";
-import RegistrationComplete from "./components/registrationomplete";
-import SideMenuBar from "./components/sideMenuBar";
 import Layout from "./components/layout";
 import Orders from "./components/orders";
 import Products from "./components/products";
 import Categories from "./components/categories";
 import CreateCategory from "./components/createCategory";
 import Customers from "./components/customers";
+import CustomersInfo from "./components/customersInfo";
+import Reports from "./components/reports";
+import Coupons from "./components/coupons";
+import KnowledgeBase from "./components/knowledgeBase";
+import Article from "./components/article";
+import Processing from "./components/processing";
+import Successfull from "./components/exportSuccessfull";
+import SuccessfullPage from "./pages/successfullPage";
 
 function App() {
   return (
@@ -25,9 +26,17 @@ function App() {
           <Route path='/categories' element={<Categories />}></Route>
           <Route path='/createCategory' element={<CreateCategory />}></Route>
           <Route path='/customers' element={<Customers />}></Route>
+          <Route path='/customersInfo' element={<CustomersInfo />}></Route>
+          <Route path='/reports' element={<Reports />}></Route>
+          <Route path='/coupons' element={<Coupons />}></Route>
+          <Route path='/knowledgeBase' element={<KnowledgeBase />}></Route>
+          <Route path='/successfullPage' element={<SuccessfullPage />}></Route>
+          <Route path='/article' element={<Article />}></Route>
           <Route path='*' element={<Dashboard />}></Route>
         </Route>
       </Routes>
+      {/* <Article />
+      <Processing /> */}
     </>
   );
 }

@@ -1,0 +1,9 @@
+.processing {
+  font-size: 120px;
+  font-weight: 700;
+  line-height: 20px;
+  color: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

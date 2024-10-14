@@ -6,6 +6,9 @@ const Heading = ({
   title,
   btnTitle1,
   btnTitle2,
+  whitePath,
+  bluePath,
+  isButton,
   btnWhite = true,
   btnblue = true,
 }) => {
@@ -19,7 +22,8 @@ const Heading = ({
               size={"small"}
               bg={"white"}
               title={btnTitle1}
-              isButton={"true"}
+              isButton={isButton}
+              to={whitePath}
             />
           )}
           {btnblue && (
@@ -27,7 +31,8 @@ const Heading = ({
               size={"small"}
               bg={"blue"}
               title={btnTitle2}
-              isButton={"true"}
+              isButton={isButton}
+              to={bluePath}
             />
           )}
         </div>

@@ -1,0 +1,55 @@
+.successfull_main {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+.successfull_box {
+  width: 540px;
+  border-radius: 6px;
+  position: relative;
+  background-color: #ffffff;
+  box-shadow: 0 2px 10px #262c4729;
+}
+.sb_close_icon {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  cursor: pointer;
+}
+.sbc_wrapper {
+  text-align: center;
+  padding: 40px 0;
+}
+.sbc_check {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  color: #1e5eff;
+  background-color: #ecf2ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+.sbc_title {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+  color: #131523;
+  padding-top: 16px;
+}
+.sbc_des {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #131523;
+  padding-bottom: 28px;
+}

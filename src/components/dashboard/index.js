@@ -5,10 +5,85 @@ import { Link } from "react-router-dom";
 import DolorIcon from "../../icons/dolorIcon";
 import CartIcon from "../../icons/cartIcon";
 import img1 from "../../assets/images/product-small-img1.png";
-import chartImg1 from "../../assets/images/dashboard-chart-img1.png";
 import chartImg2 from "../../assets/images/dashboard-chart-img2.png";
+import ReactECharts from "echarts-for-react";
 
 const Dashboard = () => {
+  const option = {
+    xAxis: {
+      type: "category",
+      boundaryGap: false,
+      data: [
+        "4am",
+        "5am",
+        "6am",
+        "7am",
+        "8am",
+        "9am",
+        "10am",
+        "11am",
+        "12pm",
+        "1pm",
+        "2pm",
+        "3pm",
+      ],
+      axisLabel: {
+        color: "#9b9b9b",
+      },
+    },
+    yAxis: {
+      type: "value",
+      axisLabel: {
+        color: "#9b9b9b",
+      },
+      splitLine: {
+        lineStyle: {
+          type: "dashed",
+          color: "#e0e0e0",
+        },
+      },
+    },
+    tooltip: {
+      trigger: "axis",
+      formatter: function (params) {
+        const date = params[0].axisValue;
+        const series = params.map(
+          (item) => `${item.marker} ${item.seriesName}: ${item.data} Orders`
+        );
+        return `${series.join("<br/>")}<br/>${date}`;
+      },
+    },
+    series: [
+      {
+        name: "May 22",
+        data: [10, 20, 15, 30, 34, 28, 40, 35, 25, 30, 35, 40],
+        type: "line",
+        color: "#3366FF",
+        symbol: "none",
+        symbolSize: 8,
+        lineStyle: {
+          width: 3,
+        },
+      },
+      {
+        name: "May 21",
+        data: [5, 15, 10, 20, 18, 25, 30, 28, 22, 25, 27, 30],
+        type: "line",
+        color: "#d3d3d3",
+        symbol: "none",
+        lineStyle: {
+          width: 3,
+        },
+      },
+    ],
+    grid: {
+      left: "0",
+      right: "0",
+      bottom: "3%",
+      containLabel: true,
+    },
+  };
+
   return (
     <>
       <div className={styles.dashboard}>
@@ -106,8 +181,8 @@ const Dashboard = () => {
                   </div>
                 </div>
               </div>
-              <div className={styles.chart_img1}>
-                <img src={chartImg1} alt='chart' />
+              <div className={styles.chart_first}>
+                <ReactECharts option={option} />
               </div>
             </div>
             <div className={styles.doc_right}>

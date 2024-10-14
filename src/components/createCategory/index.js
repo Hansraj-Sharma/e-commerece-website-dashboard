@@ -21,7 +21,6 @@ const CreateCategory = () => {
   const handleFileChange = (e) => {
     setFile(e.target.files[0]);
   };
-  console.log(setCategoryName);
   return (
     <div className={styles.create_category_main}>
       <div className={styles.back_btn}>
@@ -105,48 +104,4 @@ const CreateCategory = () => {
 };
 
 export default CreateCategory;
-
-// import React, { useState } from "react";
-// import styles from "./style.module.css";
-
-// const CreateCategory = () => {
-//   const [categoryName, setCategoryName] = useState("");
-//   const [file, setFile] = useState(null);
-
-//   const handleFileChange = (event) => {
-//     setFile(event.target.files[0]);
-//   };
-
-//   return (
-//     <div className={styles.container}>
-//       <h3 className={styles.title}>Category Info</h3>
-//       <div className={styles.formGroup}>
-//         <label className={styles.label}>Category Name</label>
-//         <input
-//           type='text'
-//           value={categoryName}
-//           onChange={(e) => setCategoryName(e.target.value)}
-//           className={styles.input}
-//           placeholder='Enter category name'
-//         />
-//       </div>
-//       <div className={styles.formGroup}>
-//         <label className={styles.label}>Image</label>
-//         <div className={styles.uploadBox}>
-//           <input
-//             type='file'
-//             onChange={handleFileChange}
-//             className={styles.fileInput}
-//           />
-//           <div className={styles.filePrompt}>
-//             {file ? file.name : "Add File"}
-//             <br />
-//             <span>Or drag and drop files</span>
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default CreateCategory;
+ 

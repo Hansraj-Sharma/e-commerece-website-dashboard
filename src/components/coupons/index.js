@@ -1,20 +1,22 @@
 import React, { useState } from "react";
-import orderData from "../../jsonData/orderData.json";
+import CouponData from "../../jsonData/couponsData.json";
 import Heading from "../heading";
 import Filter from "../filter";
+import { Link } from "react-router-dom";
 import styles from "./style.module.css";
+import DiscountIcon from "../../icons/discountIcon";
 
-const Orders = () => {
+const Coupons = () => {
   const [currentPage, setCurrentPage] = useState(1);
-  const ordersPerPage = 14;
+  const ordersPerPage = 10;
 
   const indexOfLastOrder = currentPage * ordersPerPage;
   const indexOfFirstOrder = indexOfLastOrder - ordersPerPage;
-  const currentOrders = orderData.slice(indexOfFirstOrder, indexOfLastOrder);
+  const currentOrders = CouponData.slice(indexOfFirstOrder, indexOfLastOrder);
 
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
-  const totalPages = Math.ceil(orderData.length / ordersPerPage);
+  const totalPages = Math.ceil(CouponData.length / ordersPerPage);
 
   const handlePriviousPage = () => {
     if (currentPage > 1) {
@@ -29,39 +31,46 @@ const Orders = () => {
   };
 
   return (
-    <div className={styles.order_main}>
-      <Heading title={"Orders"} btnTitle1={"Export"} btnTitle2={"Add Order"} />
+    <div className={styles.coupons_main}>
+      <Heading title={"Coupons"} btnWhite={false} btnTitle2={"Create Coupon"} />
       <div className={styles.order_footer}>
+        <div className={styles.customers_wrapper}>
+          <span>All Coupons </span>
+          <span>Active Coupons</span>
+          <span>Expired Coupons</span>
+        </div>
         <Filter />
 
         <table className={styles.order_table}>
           <tr className={styles.order_data_wrapper}>
             <th>
               <input type='checkbox' />
-              <span>Order</span>
+              <span>Coupon Name</span>
             </th>
+            <th>Usage</th>
+            <th>Status</th>
             <th>Date</th>
-            <th>Customer</th>
-            <th>Payment status</th>
-            <th>Order Status</th>
-            <th>Total</th>
           </tr>
 
           {currentOrders.map((value, index) => (
             <tr className={styles.order_data_wrapper} key={index}>
               <td>
                 <input type='checkbox' />
-                <span>{value.order_id}</span>
+                <div className={styles.product_info}>
+                  <div className={styles.customer_name}>
+                    <DiscountIcon />
+                  </div>
+                  <div className={styles.product_name}>
+                    <div className={styles.coupon_name}>{value.name} </div>
+                    <span>{value.other}</span>
+                  </div>
+                </div>
               </td>
-              <td>{value.date_time}</td>
-              <td>{value.customer_name}</td>
+              <td>{value.Usage}</td>
+              <td>{value.Status}</td>
               <td>
-                <span>{value.payment_status}</span>
+                <span>{value.Date}</span>
               </td>
-              <td>
-                <span>{value.order_status}</span>
-              </td>
-              <td>{value.amount}</td>
             </tr>
           ))}
         </table>
@@ -71,7 +80,6 @@ const Orders = () => {
             className={currentPage > 1 ? styles.active : ""}>
             &#8592;
           </button>
-
           {Array.from({ length: totalPages }, (_, index) => (
             <button
               key={index}
@@ -80,7 +88,6 @@ const Orders = () => {
               {index + 1}
             </button>
           ))}
-
           <button
             onClick={handleNextPage}
             className={currentPage < totalPages ? styles.active : ""}>
@@ -92,4 +99,4 @@ const Orders = () => {
   );
 };
 
-export default Orders;
+export default Coupons;
