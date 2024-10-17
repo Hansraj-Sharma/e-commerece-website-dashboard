@@ -5,11 +5,11 @@ import { Link } from "react-router-dom";
 import DolorIcon from "../../icons/dolorIcon";
 import CartIcon from "../../icons/cartIcon";
 import img1 from "../../assets/images/product-small-img1.png";
-import chartImg2 from "../../assets/images/dashboard-chart-img2.png";
 import ReactECharts from "echarts-for-react";
+import { color } from "echarts";
 
 const Dashboard = () => {
-  const option = {
+  const option1 = {
     xAxis: {
       type: "category",
       boundaryGap: false,
@@ -82,6 +82,35 @@ const Dashboard = () => {
       bottom: "3%",
       containLabel: true,
     },
+  };
+
+  const option2 = {
+    xAxis: {
+      type: "category",
+      data: [12, 13, 14, 15, 16, 17, 18],
+      axisLine: { show: false },
+      axisTick: { show: false },
+    },
+    color: "#1FD286",
+
+    yAxis: {
+      type: "value",
+      show: false,
+    },
+    series: [
+      {
+        data: [120, 200, 150, 80, 70, 110, 130],
+        type: "bar",
+        barWidth: "34%",
+        barCategoryGap: "40%",
+        itemStyle: {
+          normal: {
+            barBorderRadius: [50],
+          },
+        },
+      },
+    ],
+    grid: {},
   };
 
   return (
@@ -182,7 +211,7 @@ const Dashboard = () => {
                 </div>
               </div>
               <div className={styles.chart_first}>
-                <ReactECharts option={option} />
+                <ReactECharts option={option1} />
               </div>
             </div>
             <div className={styles.doc_right}>
@@ -197,8 +226,8 @@ const Dashboard = () => {
                 <br />
                 Revenue
               </div>
-              <div className={styles.docr_chart}>
-                <img src={chartImg2} alt='chart img' />
+              <div className={styles.docr_chart} id='chart'>
+                <ReactECharts option={option2} />
               </div>
             </div>
           </div>

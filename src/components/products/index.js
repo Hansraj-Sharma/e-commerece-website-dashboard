@@ -57,20 +57,20 @@ const Products = () => {
                 <input type='checkbox' />
                 <div className={styles.product_info}>
                   <div className={styles.product_img}>
-                    <img src={img2} alt='product img' />
+                    <img src={value.img} alt='product img' />
                   </div>
                   <div className={styles.product_name}>
                     <div className={styles.product_category}>
                       {value.category}{" "}
                     </div>
-                    <span>{value.name}</span>
+                    <span>{value.product_name}</span>
                   </div>
                 </div>
               </td>
-              <td>{value.inventory}</td>
+              <td>{value.stock} in stock</td>
               <td>{value.color}</td>
               <td>
-                <span>{value.price}</span>
+                <span>${value.product_price}</span>
               </td>
               <td>
                 <span>{value.rating}</span>

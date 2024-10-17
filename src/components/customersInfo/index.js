@@ -50,7 +50,7 @@ const CustomersInfo = () => {
                 </th>
                 <th>Date</th>
                 <th>Order Status</th>
-                <th>price</th>
+                <th>price</th> 
               </tr>
 
               {orderData.map((value, index) => (

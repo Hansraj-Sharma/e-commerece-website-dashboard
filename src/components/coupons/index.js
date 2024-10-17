@@ -62,14 +62,16 @@ const Coupons = () => {
                   </div>
                   <div className={styles.product_name}>
                     <div className={styles.coupon_name}>{value.name} </div>
-                    <span>{value.other}</span>
+                    <span>{value.code}</span>
                   </div>
                 </div>
               </td>
-              <td>{value.Usage}</td>
-              <td>{value.Status}</td>
+              <td>{value.usage}</td>
+              <td>{value.status}</td>
               <td>
-                <span>{value.Date}</span>
+                <span>
+                  {value.duration?.start_date} - {value.duration?.end_date}
+                </span>
               </td>
             </tr>
           ))}

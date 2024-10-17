@@ -72,7 +72,7 @@ const Customers = () => {
                   </div>
                 </div>
               </td>
-              <td>{value.location}</td>
+              <td>{value.address}</td>
               <td>{value.orders}</td>
               <td>
                 <span>{value.spent}</span>
@@ -80,26 +80,28 @@ const Customers = () => {
             </tr>
           ))}
         </table>
-        <div className={styles.pagination}>
-          <button
-            onClick={handlePriviousPage}
-            className={currentPage > 1 ? styles.active : ""}>
-            &#8592;
-          </button>
-          {Array.from({ length: totalPages }, (_, index) => (
+        {totalPages > 1 && (
+          <div className={styles.pagination}>
             <button
-              key={index}
-              onClick={() => paginate(index + 1)}
-              className={currentPage === index + 1 ? styles.active : ""}>
-              {index + 1}
+              onClick={handlePriviousPage}
+              className={currentPage > 1 ? styles.active : ""}>
+              &#8592;
             </button>
-          ))}
-          <button
-            onClick={handleNextPage}
-            className={currentPage < totalPages ? styles.active : ""}>
-            &#8594;
-          </button>
-        </div>
+            {Array.from({ length: totalPages }, (_, index) => (
+              <button
+                key={index}
+                onClick={() => paginate(index + 1)}
+                className={currentPage === index + 1 ? styles.active : ""}>
+                {index + 1}
+              </button>
+            ))}
+            <button
+              onClick={handleNextPage}
+              className={currentPage < totalPages ? styles.active : ""}>
+              &#8594;
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );

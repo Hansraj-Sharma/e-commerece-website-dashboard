@@ -41,6 +41,12 @@
   height: 48px;
   border-radius: 6px;
 }
+.product_img img {
+  width: 48px;
+  height: 48px;
+  border-radius: 6px;
+  object-fit: cover;
+}
 .product_name .product_category {
   font-size: 14px;
   font-weight: 500;

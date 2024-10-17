@@ -150,6 +150,9 @@
   border-radius: 6px;
   flex: 1;
   background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .doc_left_head {
   display: flex;
@@ -225,6 +228,7 @@
   padding: 28px 28px 22px 28px;
   border-radius: 6px;
   background-color: #ffffff;
+  width: 300px;
 }
 .doc_right_title {
   font-size: 16px;
@@ -251,7 +255,4 @@
 .docr_price {
   padding-bottom: 30px;
   border-bottom: 1px solid #e6e9f4;
-}
-.docr_chart {
-  margin-top: 30px;
 }
