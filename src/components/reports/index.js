@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import Heading from "../heading";
 import ReactECharts from "echarts-for-react";
 import styles from "./style.module.css";
-import WorldMap from "../worldMap";
 import * as echarts from "echarts/core";
 import { MapChart } from "echarts/charts";
 import { TitleComponent, TooltipComponent } from "echarts/components";
@@ -386,7 +385,6 @@ const Reports = () => {
       <div className={styles.customer_demographics_wrapper}>
         <div className={styles.customer_demographics_left}>
           <div className={styles.report_title}>Customer Demographics</div>
-          {/* <WorldMap /> */}
           <ReactECharts option={wordmapOption} />
         </div>
         <div className={styles.customer_demographics_right}>
@@ -418,7 +416,7 @@ const Reports = () => {
         </div>
       </div>
 
-      <div className={styles.d_tabel}>
+      {/* <div className={styles.d_tabel}>
         <div className={styles.d_tabel_box}>
           <div className={styles.d_tabel_title}>Top Customers</div>
           <table className={styles.order_table}>
@@ -448,7 +446,7 @@ const Reports = () => {
         <div className={styles.d_tabel_box}>
           <div className={styles.d_tabel_title}>Top Products by Units Sold</div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

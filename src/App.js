@@ -14,6 +14,9 @@ import Article from "./components/article";
 import Processing from "./components/processing";
 import Successfull from "./components/exportSuccessfull";
 import SuccessfullPage from "./pages/successfullPage";
+import AddProducts from "./components/addProducts";
+import AddCustomer from "./components/addCustomer";
+import CreateCoupon from "./components/createCoupon";
 
 function App() {
   return (
@@ -32,11 +35,12 @@ function App() {
           <Route path='/knowledgeBase' element={<KnowledgeBase />}></Route>
           <Route path='/successfullPage' element={<SuccessfullPage />}></Route>
           <Route path='/article' element={<Article />}></Route>
+          <Route path='/addCustomer' element={<AddCustomer />}></Route>
+          <Route path='/addProducts' element={<AddProducts />}></Route>
+          <Route path='/createCoupon' element={<CreateCoupon />}></Route>
           <Route path='*' element={<Dashboard />}></Route>
         </Route>
       </Routes>
-      {/* <Article />
-      <Processing /> */}
     </>
   );
 }

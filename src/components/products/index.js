@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styles from "./style.module.css";
-import img2 from "../../assets/images/product-small-img2.png";
+// import img2 from "../../assets/images/product-small-img2.png";
 import productData from "../../jsonData/productData.json";
 import Heading from "../heading";
 import Filter from "../filter";
@@ -35,6 +35,7 @@ const Products = () => {
         title={"Products"}
         btnTitle1={"Export"}
         btnTitle2={"Add Order"}
+        bluePath={"/addProducts"}
       />
       <div className={styles.order_footer}>
         <Filter />

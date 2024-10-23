@@ -9,21 +9,28 @@ const Filter = ({
   select = true,
   search = true,
   customClass,
+  delOnClick,
+  onSearch,
+  onFilterChange,
 }) => {
+  const handleFilterChange = (e) => {
+    onFilterChange(e.target.value);
+  };
+
   return (
     <div className={styles.order_features}>
       <div className={`${styles.of_left} ${customClass}`}>
         {select && (
-          <select className={styles.order_filter}>
-            <option>Filter</option>
-            <option>Ready</option>
-            <option>Shipped</option>
+          <select className={styles.order_filter} onChange={handleFilterChange}>
+            <option value='All'>All</option>
+            <option value='Active'>Active</option>
+            <option value='Expired'>Expired</option>
           </select>
         )}
         {search && (
           <div className={`${styles.of_search} ${customClass}`}>
             <SearchIcon />
-            <input type='text' placeholder='Search...' />
+            <input type='text' placeholder='Search...' onChange={onSearch} />
           </div>
         )}
       </div>
@@ -32,7 +39,7 @@ const Filter = ({
           <button>
             <EditIcon />
           </button>
-          <button>
+          <button onClick={delOnClick}>
             <DeleteIcon />
           </button>
         </div>
