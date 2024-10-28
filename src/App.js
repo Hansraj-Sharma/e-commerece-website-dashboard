@@ -17,6 +17,7 @@ import SuccessfullPage from "./pages/successfullPage";
 import AddProducts from "./components/addProducts";
 import AddCustomer from "./components/addCustomer";
 import CreateCoupon from "./components/createCoupon";
+import Settings from "./components/settings";
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
           <Route path='/addCustomer' element={<AddCustomer />}></Route>
           <Route path='/addProducts' element={<AddProducts />}></Route>
           <Route path='/createCoupon' element={<CreateCoupon />}></Route>
+          <Route path='/settings' element={<Settings />}></Route>
           <Route path='*' element={<Dashboard />}></Route>
         </Route>
       </Routes>

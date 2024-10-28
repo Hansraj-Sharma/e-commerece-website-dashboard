@@ -1,4 +1,4 @@
-.ad_container {
+.settings_main {
   padding: 30px 40px 40px 40px;
 }
 .back_btn {
@@ -13,17 +13,25 @@
 .back_btn span {
   font-size: 18px;
 }
-.ad_container {
-  background-color: #f8f9fa;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
 .form_container {
-  /* max-width: 800px; */
-  /* margin: 0 auto; */
-  padding: 0px 40px 40px 40px;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px #15223214;
+  padding: 28px 28px 40px 28px;
 }
-
+.tab_btns {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+}
+.tab_btns .button {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #5a607f;
+  background-color: transparent;
+  border: none;
+  padding-bottom: 16px;
+}
 .fc_customerInfo h2,
 .fc_customerInfo1 h2,
 .fc_customerInfo2 h2 {

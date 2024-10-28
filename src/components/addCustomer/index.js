@@ -2,7 +2,6 @@ import React from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import styles from "./style.module.css";
 import Heading from "../heading";
-// import MainDashboardHeading from "../mainDashboardHeding";
 // import * as Yup from "yup";
 
 const AddCustomer = () => {

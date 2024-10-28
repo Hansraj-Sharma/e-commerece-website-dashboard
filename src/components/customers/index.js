@@ -38,6 +38,7 @@ const Customers = () => {
         title={"Customers"}
         btnTitle1={"Export"}
         btnTitle2={"Add Customer"}
+        bluePath={"/addCustomer"}
       />
       <div className={styles.order_footer}>
         <div className={styles.customers_wrapper}>

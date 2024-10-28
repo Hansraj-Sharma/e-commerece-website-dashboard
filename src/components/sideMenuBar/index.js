@@ -33,7 +33,7 @@ const NavigationData3 = [
   {
     icon: <PersonIcon />,
     title: "Personal Settings",
-    path: "/personalSettings",
+    path: "/settings",
   },
   { icon: <SettingIcon />, title: "Global Settings", path: "/globalSettings" },
 ];
